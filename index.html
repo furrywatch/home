@@ -1,0 +1,1165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furry Watch - The Ultimate Pet Care Ecosystem</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+            .text-blue { color: #2563eb !important; }
+        body { font-family: 'Inter', sans-serif; }
+        .clip-path-slant {
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        }
+        .animate-pulse-slow {
+            animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: .7; }
+        }
+        /* Apple-style smooth reveal */
+        .reveal-text {
+            background: linear-gradient(to right, #0f172a 20%, #64748b 40%, #0f172a 60%, #0f172a 80%);
+            background-size: 200% auto;
+            color: #000;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shine 5s linear infinite;
+        }
+        @keyframes shine {
+            to {
+                background-position: 200% center;
+            }
+        }
+        /* Rotating animation for orbiting icons */
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        @keyframes reverse-spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(-360deg); }
+        }
+        .animate-spin-slow {
+            animation: spin 20s linear infinite;
+        }
+        .animate-reverse-spin {
+            animation: reverse-spin 20s linear infinite;
+        }
+        /* Keep icons upright as they orbit */
+        .orbit-icon {
+            /* Will be counter-rotated inline */
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-2">
+                    <a href="">
+                    <span class="font-bold tracking-tighter uppercase" style="color: #8f98b3;">FURRYWATCH</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#features" class="text-slate-600 hover:text-amber-500 transition">Features</a>
+                    <a href="#app" class="text-slate-600 hover:text-amber-500 transition">The App</a>
+                    <!-- <a href="#rewards" class="text-slate-600 hover:text-amber-500 transition">Rewards</a> -->
+                    <a href="#faq" class="text-slate-600 hover:text-amber-500 transition">FAQ</a>
+                </div>
+                <button onclick="window.location.href='waitlist.html'" class="bg-amber-400 hover:bg-yellow-400 text-slate-900 font-bold px-6 py-2 rounded-full transition shadow-lg shadow-amber-400/25">
+                    Join the Waitlist
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero">
+    <div class="relative bg-slate-900 text-white overflow-hidden pb-16 lg:pb-24">
+        <div class="absolute inset-0">
+            <div class="absolute inset-0 bg-gradient-to-br from-amber-400/30 to-slate-900/90 mix-blend-multiply"></div>
+            <!-- Abstract background shapes -->
+            <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-amber-400/10 blur-3xl"></div>
+            <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 rounded-full bg-yellow-400/10 blur-3xl"></div>
+        </div>
+
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 lg:pt-24">
+            <div class="lg:grid lg:grid-cols-12 lg:gap-16 items-center">
+                
+                <!-- Hero Content -->
+                <div class="lg:col-span-7 space-y-8">
+                    <!-- <div class="inline-flex items-center px-3 py-1 rounded-full bg-amber-400/10 border border-amber-400/20 text-amber-500 text-sm font-medium">
+                        <span class="animate-pulse mr-2 h-2 w-2 rounded-full bg-amber-400"></span>
+                        Coming soon on Kickstarter
+                    </div> -->
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+                        AURA Ecosystem <br>
+                    </h1>
+                    <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight">
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-yellow-400">Intelligent Pet Monitoring,<br> All in One Place</span>
+                    </h2>
+                    <p class="text-lg text-slate-300 max-w-2xl">
+                        <span class="text-white">Sentinel Camera, Guardian Collar, Sanctuary Crate.<br>
+                            Furrywatch pairs real-time monitoring with responsive tools that help guide your pet away from unsafe behavior.
+                        </span><br><br>
+                        <span class="text-amber-400 font-bold">Know More. Act Sooner.</span>
+                    </p>
+
+                    <!-- Funding Stats -->
+                    <!-- <div class="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
+                        <div class="flex flex-col space-y-4">
+                            <div class="w-full bg-slate-700 rounded-full h-3">
+                                <div class="bg-gradient-to-r from-teal-400 to-emerald-400 h-3 rounded-full" style="width: 2%"></div>
+                            </div>
+                            <div class="grid grid-cols-2 gap-4 text-center divide-x divide-white/10">
+                                <div>
+                                    <div class="text-2xl font-bold text-white">$500,000</div>
+                                    <div class="text-xs text-slate-400 uppercase tracking-wider">Goal</div>
+                                </div>
+                                <div>
+                                    <div class="text-2xl font-bold text-white">389</div>
+                                    <div class="text-xs text-slate-400 uppercase tracking-wider">Days to go</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button onclick="window.location.href='waitlist.html'" class="px-8 py-4 bg-amber-400 hover:bg-yellow-400 text-slate-900 font-bold rounded-xl transition shadow-lg shadow-amber-400/25 flex items-center justify-center">
+                            Join the Waitlist
+                            <i data-lucide="arrow-right" class="ml-2 h-5 w-5"></i>
+                        </button>
+                        <button class="px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-xl backdrop-blur-sm transition flex items-center justify-center border border-white/10">
+                            <i data-lucide="play-circle" class="mr-2 h-5 w-5"></i>
+                            Watch Video (coming soon)
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Hero Image Placeholder -->
+                <div class="lg:col-span-5 mt-12 lg:mt-0">
+                    <div class="relative rounded-3xl overflow-hidden shadow-2xl border border-white/10 bg-gradient-to-b from-slate-800 to-slate-900 aspect-[4/5] flex flex-col items-center justify-center group">
+                        <!-- Abstract Representation of the Ecosystem -->
+                        <div class="relative w-[340px] h-[340px] flex items-center justify-center">
+                            <!-- Orbiting Animation Wrapper (spins everything inside) -->
+                            <div class="absolute inset-0 flex items-center justify-center animate-spin-slow" style="width:340px;height:340px;">
+                                <!-- Orbiting Ring -->
+                                <div class="absolute inset-0 border-2 border-dashed border-blue-200 rounded-full" style="width:340px;height:340px;"></div>
+                                <!-- Orbiting Icons (stay upright) -->
+                                <div class="absolute top-[0%] left-[50%]" style="transform:translate(-50%,-50%);">
+                                    <div class="p-3 bg-white/90 shadow-lg rounded-xl border border-blue-50 animate-reverse-spin">
+                                        <img src="../furryWatch/Images/dog-dish-svgrepo-com.svg" alt="Dog bowl" class="w-8 h-7 object-contain" />
+                                    </div>
+                                </div>
+                                <div class="absolute top-[15%] left-[85%]" style="transform:translate(-50%,-50%);">
+                                    <div class="p-3 bg-white/90 shadow-lg rounded-xl border border-blue-50 animate-reverse-spin">
+                                        <img src="../furryWatch/Images/webcam-3-svgrepo-com.svg" alt="Camera" class="w-14 h-8 object-contain" />
+                                    </div>
+                                </div>
+                                <div class="absolute top-[50%] left-[100%]" style="transform:translate(-50%,-50%);">
+                                    <div class="p-3 bg-white/90 shadow-lg rounded-xl border border-blue-50 animate-reverse-spin">
+                                        <span class="text-2xl">🏠</span>
+                                    </div>
+                                </div>
+                                <div class="absolute top-[85%] left-[85%]" style="transform:translate(-50%,-50%);">
+                                    <div class="p-3 bg-white/90 shadow-lg rounded-xl border border-blue-50 animate-reverse-spin">
+                                        <span class="text-2xl">📍</span>
+                                    </div>
+                                </div>
+                                <div class="absolute top-[100%] left-[50%]" style="transform:translate(-50%,-50%);">
+                                    <div class="p-3 bg-white/90 shadow-lg rounded-xl border border-blue-50 animate-reverse-spin">
+                                        <span class="text-2xl">🦴</span>
+                                    </div>
+                                </div>
+                                <div class="absolute top-[85%] left-[15%]" style="transform:translate(-50%,-50%);">
+                                    <div class="p-3 bg-white/90 shadow-lg rounded-xl border border-blue-50 animate-reverse-spin">
+                                        <span class="text-2xl">💧</span>
+                                    </div>
+                                </div>
+                                <div class="absolute top-[50%] left-[0%]" style="transform:translate(-50%,-50%);">
+                                    <div class="p-3 bg-white/90 shadow-lg rounded-xl border border-blue-50 animate-reverse-spin">
+                                        <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="#021CA4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="6" width="12" height="12" rx="1"/><path d="M6 10H2"/><path d="M6 14H2"/><path d="M10 6V2"/><path d="M14 6V2"/><path d="M18 10h4"/><path d="M18 14h4"/><path d="M10 18v4"/><path d="M14 18v4"/></svg>
+                                    </div>
+                                </div>
+                                <div class="absolute top-[15%] left-[15%]" style="transform:translate(-50%,-50%);">
+                                    <div class="p-3 bg-white/90 shadow-lg rounded-xl border border-blue-50 animate-reverse-spin">
+                                        <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19.5 12.572l-7.5 7.428l-7.5-7.428A5 5 0 1 1 12 6.006a5 5 0 1 1 7.5 6.572"/><path d="M5 12h3l2-3 3 6 2-3h4" stroke="#ef4444" stroke-width="2"/></svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Central Phone Mockup (mimic Mobile App Mockup, larger) -->
+                            <div class="absolute inset-0 flex items-center justify-center z-20">
+                                <div class="relative mx-auto border-gray-800 bg-gray-800 border-[10px] rounded-[1.2rem] h-[260px] w-[130px] shadow-2xl">
+                                    <div class="h-[32px] w-[3px] bg-gray-800 absolute -left-[13px] top-[40px] rounded-l-lg"></div>
+                                    <div class="h-[46px] w-[3px] bg-gray-800 absolute -left-[13px] top-[80px] rounded-l-lg"></div>
+                                    <div class="h-[46px] w-[3px] bg-gray-800 absolute -left-[13px] top-[140px] rounded-l-lg"></div>
+                                    <div class="h-[64px] w-[3px] bg-gray-800 absolute -right-[13px] top-[100px] rounded-r-lg"></div>
+                                    <div class="rounded-[1rem] overflow-hidden w-full h-full bg-slate-100 relative">
+                                        <!-- Screen Content -->
+                                        <div class="bg-amber-400 h-12 p-1.5 text-white rounded-b-xl">
+                                            <div class="flex justify-between items-center mt-0.5">
+                                                <div>
+                                                    <div class="text-[7px] opacity-80 leading-tight">Good Morning,</div>
+                                                    <div class="font-bold text-[11px] leading-tight whitespace-nowrap">Buddy is Active</div>
+                                                </div>
+                                                <div class="h-4 w-4 bg-white/20 rounded-full flex items-center justify-center">
+                                                    <i data-lucide="menu" class="h-2.5 w-2.5"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="p-1 space-y-2 -mt-2">
+                                            <div class="bg-white p-1 rounded-md shadow flex items-center justify-between">
+                                                <div class="flex items-center space-x-1">
+                                                    <div class="bg-green-100 p-0.5 rounded">
+                                                        <i data-lucide="heart-pulse" class="h-2.5 w-2.5 text-green-600"></i>
+                                                    </div>
+                                                    <div>
+                                                        <div class="text-[6px] text-gray-500 leading-none">Heart Rate</div>
+                                                        <div class="font-bold text-[7px] text-slate-800 leading-none">78 BPM</div>
+                                                    </div>
+                                                </div>
+                                                <div class="text-[6px] text-green-600 bg-green-50 px-1 py-0.5 rounded">Normal</div>
+                                            </div>
+                                            <div class="rounded-md shadow overflow-hidden h-16 relative">
+                                                <div class="absolute inset-0 flex items-center justify-center bg-center bg-cover bg-no-repeat" style="background-image: url('../furryWatch/Images/dog-barking-home.jpg');">
+                                                    <i data-lucide="play-circle" class="h-3 w-3 text-white opacity-80"></i>
+                                                </div>
+                                                <div class="absolute bottom-0.5 left-1 text-white text-[6px] font-bold">Living Room Cam</div>
+                                                <div class="absolute bottom-0.5 right-1 flex items-center space-x-0.5 text-white text-[5px] opacity-80">
+                                                    <i data-lucide="switch-camera" class="h-2 w-2"></i>
+                                                    <span>Change</span>
+                                                </div>
+                                                <div class="absolute top-0.5 right-1 flex items-center space-x-0.5">
+                                                    <div class="h-1.5 w-1.5 bg-red-500 rounded-full animate-pulse"></div>
+                                                    <span class="text-[6px] text-white">LIVE</span>
+                                                </div>
+                                            </div>
+                                            <div class="grid grid-cols-2 gap-0.5">
+                                                <div class="bg-white p-1.5 rounded-md shadow border border-slate-100 text-center">
+                                                    <i data-lucide="lock" class="h-3 w-3 mx-auto text-indigo-500 mb-0.5"></i>
+                                                    <div class="text-[6px] font-bold text-slate-700 leading-tight">Lock Crate</div>
+                                                </div>
+                                                <div class="bg-white p-1.5 rounded-md shadow border border-slate-100 text-center">
+                                                    <i data-lucide="fan" class="h-3 w-3 mx-auto text-pink-500 mb-0.5"></i>
+                                                    <div class="text-[6px] font-bold text-slate-700 leading-tight">Ventilation</div>
+                                                </div>
+                                                <div class="bg-white p-1.5 rounded-md shadow border border-slate-100 text-center">
+                                                    <i data-lucide="utensils" class="h-3 w-3 mx-auto text-pink-500 mb-0.5"></i>
+                                                    <div class="text-[6px] font-bold text-slate-700 leading-tight">Dispense<br>Food</div>
+                                                </div>
+                                                <div class="bg-white p-1.5 rounded-md shadow border border-slate-100 text-center">
+                                                    <i data-lucide="droplet" class="h-3 w-3 mx-auto text-pink-500 mb-0.5"></i>
+                                                    <div class="text-[6px] font-bold text-slate-700 leading-tight">Dispense<br>Water</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <!-- Mission & Vision (Apple Style) -->
+    <section class="py-32 bg-white border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col items-center text-center space-y-12">
+                
+                <!-- Mission -->
+                <div class="max-w-4xl">
+                    <span class="text-amber-400 font-bold tracking-widest uppercase text-2xl mb-6 block">Our Mission</span>
+                    <h2 class="text-5xl md:text-7xl font-extrabold text-slate-900 tracking-tighter mb-8 leading-tight">
+                        Safety without<br>boundaries.
+                    </h2>
+                    <p class="text-2xl md:text-3xl font-light text-slate-500 leading-normal max-w-3xl mx-auto">
+                        To provide boundless safety for the life you love through technology you can trust.
+                    </p>
+                </div>
+
+                <!-- Minimalist Divider -->
+                <div class="h-1 w-px bg-gradient-to-b from-slate-200 to-transparent"></div>
+
+                <!-- Vision -->
+                <div class="max-w-4xl">
+                    <span class="text-amber-400 font-bold tracking-widest uppercase text-2xl mb-6 block">Our Vision</span>
+                    <h2 class="text-5xl md:text-7xl font-extrabold text-slate-900 tracking-tighter mb-8 leading-tight">
+                        Care, redefined.
+                    </h2>
+                    <p class="text-2xl md:text-3xl font-light text-slate-500 leading-normal max-w-3xl mx-auto">
+                        A world where "alone" never means "unsafe".
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Grid -->
+    <section id="features" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-amber-400 font-semibold tracking-wide uppercase text-2xl mb-2">Hardware Features</h2>
+                <h3 class="text-3xl md:text-4xl font-bold text-slate-900">Three Devices. One Mind.</h3>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Camera -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition duration-300 border border-slate-100 group">
+                    <div class="h-14 w-14 bg-teal-100 rounded-xl flex items-center justify-center mb-6 group-hover:bg-teal-600 transition duration-300">
+                        <i data-lucide="video" class="h-7 w-7 text-teal-600 group-hover:text-white transition"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">Sentinel Smart Camera</h4>
+                    <p class="text-slate-600 mb-4">AI-powered monitoring that distinguishes between playing, sleeping, and distress.</p>
+                    <ul class="space-y-2 text-sm text-slate-500">
+                        <li class="flex items-center"><i data-lucide="check" class="h-4 w-4 text-teal-500 mr-2"></i> 1080p Night Vision</li>
+                        <li class="flex items-center"><i data-lucide="check" class="h-4 w-4 text-teal-500 mr-2"></i> Two-way Audio</li>
+                        <li class="flex items-center"><i data-lucide="check" class="h-4 w-4 text-teal-500 mr-2"></i> Treat Dispenser Compatible</li>
+                    </ul>
+                </div>
+
+                <!-- Collar -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition duration-300 border border-slate-100 group">
+                    <div class="h-14 w-14 bg-orange-100 rounded-xl flex items-center justify-center mb-6 group-hover:bg-orange-500 transition duration-300">
+                        <i data-lucide="locate-fixed" class="h-7 w-7 text-orange-600 group-hover:text-white transition"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">Guardian GPS Collar</h4>
+                    <p class="text-slate-600 mb-4">Real-time location tracking combined with vital sign monitoring (Heart Rate, Temp).</p>
+                    <ul class="space-y-2 text-sm text-slate-500">
+                        <li class="flex items-center"><i data-lucide="check" class="h-4 w-4 text-orange-500 mr-2"></i> Smart training with e-clicker</li>
+                        <li class="flex items-center"><i data-lucide="check" class="h-4 w-4 text-orange-500 mr-2"></i> Corrective Measures</li>
+                        <li class="flex items-center"><i data-lucide="check" class="h-4 w-4 text-orange-500 mr-2"></i> Activity & Sleep Analysis</li>
+                        <li class="flex items-center"><i data-lucide="check" class="h-4 w-4 text-orange-500 mr-2"></i> Global LTE Tracking</li>
+                    </ul>
+                </div>
+
+                <!-- Crate -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition duration-300 border border-slate-100 group">
+                    <div class="h-14 w-14 bg-indigo-100 rounded-xl flex items-center justify-center mb-6 group-hover:bg-indigo-600 transition duration-300">
+                        <i data-lucide="home" class="h-7 w-7 text-indigo-600 group-hover:text-white transition"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">Sanctuary Smart Crate</h4>
+                    <p class="text-slate-600 mb-4">More than a cage. It's an automated care station for safety and comfort.</p>
+                    <ul class="space-y-2 text-sm text-slate-500">
+                        <li class="flex items-center"><i data-lucide="check" class="h-4 w-4 text-indigo-500 mr-2"></i> Auto-locking Mechanism</li>
+                        <li class="flex items-center"><i data-lucide="check" class="h-4 w-4 text-indigo-500 mr-2"></i> Treat & Food Dispenser</li>
+                        <li class="flex items-center"><i data-lucide="check" class="h-4 w-4 text-indigo-500 mr-2"></i> Climate Control</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- App Showcase Horizontal Slides Section -->
+    <section id="app" class="py-24 bg-slate-900 text-white overflow-hidden relative">
+      <div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
+        <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+              <path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" stroke-width="1"/>
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#grid)" />
+        </svg>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div id="app-slides-scroll" class="flex flex-row gap-8 overflow-x-auto snap-x snap-mandatory scrollbar-hide" style="scroll-behavior: smooth; -webkit-overflow-scrolling: touch;">
+                                        <!-- Slide 1 -->
+                                        <section class="min-w-full snap-center">
+                                            <div class="app-slide-glass p-6 md:p-12 h-full flex items-center">
+                                                <div class="lg:grid lg:grid-cols-2 gap-16 items-center w-full">
+                            <div>
+                                <h2 class="text-amber-400 font-semibold tracking-wide uppercase text-sm mb-2">The Control Center</h2>
+                                <h3 class="text-4xl font-bold mb-6">Designed for Awareness</h3>
+                                <p class="text-slate-300 text-lg mb-8">
+                                    From smart alerts to built-in vibration cues and controlled correction features, every interaction is designed with safety, intention, and your pet’s wellbeing in mind.
+                                </p>
+                                <div class="space-y-6">
+                                    <div class="flex">
+                                        <div class="flex-shrink-0">
+                                            <div class="flex items-center justify-center h-12 w-12 rounded-md bg-amber-400 text-white">
+                                                <i data-lucide="cctv" class="h-6 w-6"></i>
+                                            </div>
+                                        </div>
+                                        <div class="ml-4">
+                                            <h4 class="text-lg font-medium">Remote Surveillance</h4>
+                                            <p class="mt-2 text-slate-400">Two-way video/audio and AI camera integration.</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex">
+                                        <div class="flex-shrink-0">
+                                            <div class="flex items-center justify-center h-12 w-12 rounded-md bg-amber-400 text-white">
+                                                <i data-lucide="heart-plus" class="h-6 w-6"></i>
+                                            </div>
+                                        </div>
+                                        <div class="ml-4">
+                                            <h4 class="text-lg font-medium">Health Monitoring</h4>
+                                            <p class="mt-2 text-slate-400">Continuous tracking of heart rate, ECG, temperature, and activity.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-12 lg:mt-0 flex justify-center">
+                                <!-- Mobile App Mockup -->
+                                <div class="relative mx-auto border-gray-800 bg-gray-800 border-[14px] rounded-[2.5rem] h-[600px] w-[300px] shadow-2xl">
+                                    <div class="h-[32px] w-[3px] bg-gray-800 absolute -left-[17px] top-[72px] rounded-l-lg"></div>
+                                    <div class="h-[46px] w-[3px] bg-gray-800 absolute -left-[17px] top-[124px] rounded-l-lg"></div>
+                                    <div class="h-[46px] w-[3px] bg-gray-800 absolute -left-[17px] top-[178px] rounded-l-lg"></div>
+                                    <div class="h-[64px] w-[3px] bg-gray-800 absolute -right-[17px] top-[142px] rounded-r-lg"></div>
+                                    <div class="rounded-[2rem] overflow-hidden w-full h-full bg-slate-100 relative">
+                                        <!-- Screen Content -->
+                                        <div class="bg-amber-400 h-32 p-6 text-white rounded-b-3xl">
+                                            <div class="flex justify-between items-center mt-4">
+                                                <div>
+                                                    <div class="text-xs opacity-80">Good Morning,</div>
+                                                    <div class="font-bold text-xl">Buddy is Active</div>
+                                                </div>
+                                                <div class="h-10 w-10 bg-white/20 rounded-full flex items-center justify-center">
+                                                    <i data-lucide="menu" class="h-6 w-6"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="p-4 space-y-4 -mt-8">
+                                            <div class="bg-white p-4 rounded-xl shadow-lg flex items-center justify-between">
+                                                <div class="flex items-center space-x-3">
+                                                    <div class="bg-green-100 p-2 rounded-lg">
+                                                        <i data-lucide="heart-pulse" class="h-5 w-5 text-green-600"></i>
+                                                    </div>
+                                                    <div>
+                                                        <div class="text-xs text-gray-500">Heart Rate</div>
+                                                        <div class="font-bold text-slate-800">78 BPM</div>
+                                                    </div>
+                                                </div>
+                                                <div class="text-xs text-green-600 bg-green-50 px-2 py-1 rounded">Normal</div>
+                                            </div>
+                                            <div class="p-0 rounded-xl shadow-lg overflow-hidden h-40 relative group">
+                                                <div class="absolute inset-0 flex items-center justify-center bg-center bg-contain bg-no-repeat" style="background-image: url('../furryWatch/Images/dog-barking-home.jpg');">
+                                                    <i data-lucide="play-circle" class="h-10 w-10 text-white opacity-80"></i>
+                                                </div>
+                                                <div class="absolute bottom-2 left-3 text-white text-xs font-bold">Living Room Cam</div>
+                                                <button class="absolute bottom-2 right-2 flex items-center space-x-1 text-white text-[10px] opacity-80 hover:opacity-100 transition">
+                                                    <i data-lucide="switch-camera" class="h-4 w-4"></i>
+                                                    <span>Change</span>
+                                                </button>
+                                                <div class="absolute top-2 right-3 flex items-center space-x-1">
+                                                    <div class="h-2 w-2 bg-red-500 rounded-full animate-pulse"></div>
+                                                    <span class="text-xs text-white">LIVE</span>
+                                                </div>
+                                            </div>
+                                            <div class="grid grid-cols-2 gap-3">
+                                                <div class="bg-white p-3 rounded-xl shadow border border-slate-100 text-center">
+                                                    <i data-lucide="mic" class="h-6 w-6 mx-auto mb-2" style="color:#fde206;"></i>
+                                                    <div class="text-xs font-bold text-slate-700">Speak</div>
+                                                </div>
+                                                <div class="bg-white p-3 rounded-xl shadow border border-slate-100 text-center">
+                                                    <i data-lucide="bone" class="h-6 w-6 mx-auto text-amber-500 mb-2"></i>
+                                                    <div class="text-xs font-bold text-slate-700">Treat</div>
+                                                </div>
+                                                <div class="bg-white p-3 rounded-xl shadow border border-slate-100 text-center">
+                                                    <i data-lucide="vibrate" class="h-6 w-6 mx-auto text-orange-500 mb-2"></i>
+                                                    <div class="text-xs font-bold text-slate-700">Vibrate</div>
+                                                </div>
+                                                <div class="bg-red-500 p-3 rounded-xl shadow border border-red-600 text-center">
+                                                    <i data-lucide="zap" class="h-6 w-6 mx-auto text-yellow-300 mb-2"></i>
+                                                    <div class="text-xs font-bold text-white">Zap</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                                                </div>
+                                            </div>
+                                        </section>
+                                        <!-- Slide 2 -->
+                                        <section class="min-w-full snap-center">
+                                            <div class="app-slide-glass p-6 md:p-12 h-full flex items-center">
+                                                <div class="lg:grid lg:grid-cols-2 gap-16 items-center w-full">
+                                                    <div>
+                                                        <h2 class="text-amber-400 font-semibold tracking-wide uppercase text-sm mb-2">The Control Center</h2>
+                                                        <h3 class="text-4xl font-bold mb-6">Designed for Gentle Intervention</h3>
+                                                        <p class="text-slate-300 text-lg mb-8">
+                                                            You stay informed and in control, without needing to be physically present.
+                                                        </p>
+                                                        <div class="space-y-6">
+                                                            <div class="flex">
+                                                                <div class="flex-shrink-0">
+                                                                    <div class="flex items-center justify-center h-12 w-12 rounded-md bg-amber-400 text-white">
+                                                                        <i data-lucide="circle-stop" class="h-6 w-6"></i>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="ml-4">
+                                                                    <h4 class="text-lg font-medium">Emergency Intervention</h4>
+                                                                    <p class="mt-2 text-slate-400">Via high frequency sound, vibration and e-collar.</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="flex">
+                                                                <div class="flex-shrink-0">
+                                                                    <div class="flex items-center justify-center h-12 w-12 rounded-md bg-amber-400 text-white">
+                                                                        <i data-lucide="dog" class="h-6 w-6"></i>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="ml-4">
+                                                                    <h4 class="text-lg font-medium">Training Assistance</h4>
+                                                                    <p class="mt-2 text-slate-400">Reinforce training through timely insights and feedback loops.</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="mt-12 lg:mt-0 flex justify-center">
+                                                        <!-- Mobile App Mockup -->
+                                                        <div class="relative mx-auto border-gray-800 bg-gray-800 border-[14px] rounded-[2.5rem] h-[600px] w-[300px] shadow-2xl">
+                                                            <div class="h-[32px] w-[3px] bg-gray-800 absolute -left-[17px] top-[72px] rounded-l-lg"></div>
+                                                            <div class="h-[46px] w-[3px] bg-gray-800 absolute -left-[17px] top-[124px] rounded-l-lg"></div>
+                                                            <div class="h-[46px] w-[3px] bg-gray-800 absolute -left-[17px] top-[178px] rounded-l-lg"></div>
+                                                            <div class="h-[64px] w-[3px] bg-gray-800 absolute -right-[17px] top-[142px] rounded-r-lg"></div>
+                                                            <div class="rounded-[2rem] overflow-hidden w-full h-full bg-slate-100 relative">
+                                                                <!-- Screen Content -->
+                                                                <div class="bg-amber-400 h-32 p-6 text-white rounded-b-3xl">
+                                                                    <div class="flex justify-between items-center mt-4">
+                                                                        <div>
+                                                                            <div class="text-xs opacity-80">Good Morning,</div>
+                                                                            <div class="font-bold text-xl">Buddy is Active</div>
+                                                                        </div>
+                                                                        <div class="h-10 w-10 bg-white/20 rounded-full flex items-center justify-center">
+                                                                            <i data-lucide="menu" class="h-6 w-6"></i>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="p-4 space-y-4 -mt-8">
+                                                                    <div class="bg-white p-4 rounded-xl shadow-lg flex items-center justify-between">
+                                                                        <div class="flex items-center space-x-3">
+                                                                            <div class="bg-red-100 p-2 rounded-lg">
+                                                                                <i data-lucide="triangle-alert" class="h-5 w-5 text-red-600"></i>
+                                                                            </div>
+                                                                            <div>
+                                                                                <div class="text-xs font-bold text-gray-800">Anomaly Detected</div>
+                                                                                <!-- <div class="font-bold text-slate-800">78 BPM</div> -->
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="text-xs font-semibold text-red-600 bg-red-100 px-2 py-1 rounded">
+                                                                            Intervention Required
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="p-0 rounded-xl shadow-lg overflow-hidden h-40 relative group">
+                                                                        <div class="absolute inset-0 flex items-center justify-center bg-center bg-contain bg-no-repeat" style="background-image: url('../furryWatch/Images/dog-chewing-remote.jpg');">
+                                                                            <i data-lucide="play-circle" class="h-10 w-10 text-white opacity-80"></i>
+                                                                        </div>
+                                                                        <div class="absolute bottom-2 left-3 text-white text-xs font-bold">Living Room Cam</div>
+                                                                        <button class="absolute bottom-2 right-2 flex items-center space-x-1 text-white text-[10px] opacity-80 hover:opacity-100 transition">
+                                                                            <i data-lucide="switch-camera" class="h-4 w-4"></i>
+                                                                            <span>Change</span>
+                                                                        </button>
+                                                                        <div class="absolute top-2 right-3 flex items-center space-x-1">
+                                                                            <div class="h-2 w-2 bg-red-500 rounded-full animate-pulse"></div>
+                                                                            <span class="text-xs text-white">LIVE</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="grid grid-cols-2 gap-3">
+                                                                        <div class="bg-white p-3 rounded-xl shadow border border-slate-100 text-center">
+                                                                            <i data-lucide="mic" class="h-6 w-6 mx-auto mb-2" style="color:#fde206;"></i>
+                                                                            <div class="text-xs font-bold text-slate-700">Speak</div>
+                                                                        </div>
+                                                                        <div class="bg-white p-3 rounded-xl shadow border border-slate-100 text-center">
+                                                                            <i data-lucide="bone" class="h-6 w-6 mx-auto text-amber-500 mb-2"></i>
+                                                                            <div class="text-xs font-bold text-slate-700">Treat</div>
+                                                                        </div>
+                                                                        <div class="bg-white p-3 rounded-xl shadow border border-slate-100 text-center">
+                                                                            <i data-lucide="vibrate" class="h-6 w-6 mx-auto text-orange-500 mb-2"></i>
+                                                                            <div class="text-xs font-bold text-slate-700">Vibrate</div>
+                                                                        </div>
+                                                                        <div class="bg-red-500 p-3 rounded-xl shadow border border-red-600 text-center">
+                                                                            <i data-lucide="zap" class="h-6 w-6 mx-auto text-yellow-300 mb-2"></i>
+                                                                            <div class="text-xs font-bold text-white">Zap</div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </section>
+                                        <!-- Slide 3 -->
+                                        <section class="min-w-full snap-center">
+                                            <div class="app-slide-glass p-6 md:p-12 h-full flex items-center">
+                                                <div class="lg:grid lg:grid-cols-2 gap-16 items-center w-full">
+                            <div>
+                                <h2 class="text-amber-400 font-semibold tracking-wide uppercase text-sm mb-2">The Control Center</h2>
+                                <h3 class="text-4xl font-bold mb-6">Designed for Care</h3>
+                                <p class="text-slate-300 text-lg mb-8">
+                                    Thoughtfully built to support your pet’s daily routine, even when you’re away. Because consistent care shouldn’t depend on physical presence.
+                                </p>
+                                <div class="space-y-6">
+                                    <div class="flex">
+                                        <div class="flex-shrink-0">
+                                            <div class="flex items-center justify-center h-12 w-12 rounded-md bg-amber-400 text-white">
+                                                <i data-lucide="ham" class="h-6 w-6"></i>
+                                            </div>
+                                        </div>
+                                        <div class="ml-4">
+                                            <h4 class="text-lg font-medium">Feeding Automation</h4>
+                                            <p class="mt-2 text-slate-400">Scheduled and on-demand food/water/treat dispensing.</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex">
+                                        <div class="flex-shrink-0">
+                                            <div class="flex items-center justify-center h-12 w-12 rounded-md bg-amber-400 text-white">
+                                                <i data-lucide="fan" class="h-6 w-6"></i>
+                                            </div>
+                                        </div>
+                                        <div class="ml-4">
+                                            <h4 class="text-lg font-medium">Environment Control</h4>
+                                            <p class="mt-2 text-slate-400">Receive alerts if your pet's temperature rises or activity levels drop unexpectedly.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-12 lg:mt-0 flex justify-center">
+                                <!-- Mobile App Mockup -->
+                                <div class="relative mx-auto border-gray-800 bg-gray-800 border-[14px] rounded-[2.5rem] h-[600px] w-[300px] shadow-2xl">
+                                    <div class="h-[32px] w-[3px] bg-gray-800 absolute -left-[17px] top-[72px] rounded-l-lg"></div>
+                                    <div class="h-[46px] w-[3px] bg-gray-800 absolute -left-[17px] top-[124px] rounded-l-lg"></div>
+                                    <div class="h-[46px] w-[3px] bg-gray-800 absolute -left-[17px] top-[178px] rounded-l-lg"></div>
+                                    <div class="h-[64px] w-[3px] bg-gray-800 absolute -right-[17px] top-[142px] rounded-r-lg"></div>
+                                    <div class="rounded-[2rem] overflow-hidden w-full h-full bg-slate-100 relative">
+                                        <!-- Screen Content -->
+                                        <div class="bg-amber-400 h-32 p-6 text-white rounded-b-3xl">
+                                            <div class="flex justify-between items-center mt-4">
+                                                <div>
+                                                    <div class="text-xs opacity-80">Good Morning,</div>
+                                                    <div class="font-bold text-xl">Buddy is Active</div>
+                                                </div>
+                                                <div class="h-10 w-10 bg-white/20 rounded-full flex items-center justify-center">
+                                                    <i data-lucide="menu" class="h-6 w-6"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="p-4 space-y-4 -mt-8">
+                                            <div class="bg-white p-4 rounded-xl shadow-lg flex items-center justify-between">
+                                                <div class="flex items-center space-x-3">
+                                                    <div class="bg-green-100 p-2 rounded-lg">
+                                                        <i data-lucide="heart-pulse" class="h-5 w-5 text-green-600"></i>
+                                                    </div>
+                                                    <div>
+                                                        <div class="text-xs text-gray-500">Heart Rate</div>
+                                                        <div class="font-bold text-slate-800">78 BPM</div>
+                                                    </div>
+                                                </div>
+                                                <div class="text-xs text-green-600 bg-green-50 px-2 py-1 rounded">Normal</div>
+                                            </div>
+                                            <div class="p-0 rounded-xl shadow-lg overflow-hidden h-40 relative group">
+                                                <div class="absolute inset-0 flex items-center justify-center bg-center bg-no-repeat" style="background-image: url('../furryWatch/Images/crate-dog.jpg'); background-size: cover;">
+                                                    <i data-lucide="play-circle" class="h-10 w-10 text-white opacity-80"></i>
+                                                </div>
+                                                <div class="absolute bottom-2 left-3 text-white text-xs font-bold">Crate Cam</div>
+                                                <button class="absolute bottom-2 right-2 flex items-center space-x-1 text-white text-[10px] opacity-80 hover:opacity-100 transition">
+                                                    <i data-lucide="zoom-in" class="h-4 w-4"></i>
+                                                    <span>Zoom +/-</span>
+                                                </button>
+                                                <div class="absolute top-2 right-3 flex items-center space-x-1">
+                                                    <div class="h-2 w-2 bg-red-500 rounded-full animate-pulse"></div>
+                                                    <span class="text-xs text-white">LIVE</span>
+                                                </div>
+                                            </div>
+                                            <div class="grid grid-cols-2 gap-3">
+                                                <div class="bg-white p-3 rounded-xl shadow border border-slate-100 text-center">
+                                                    <i data-lucide="lock" class="h-6 w-6 mx-auto text-indigo-500 mb-2"></i>
+                                                    <div class="text-xs font-bold text-slate-700">Lock Crate</div>
+                                                </div>
+                                                <div class="bg-white p-3 rounded-xl shadow border border-slate-100 text-center">
+                                                    <i data-lucide="fan" class="h-6 w-6 mx-auto text-pink-500 mb-2"></i>
+                                                    <div class="text-xs font-bold text-slate-700">Ventilation</div>
+                                                </div>
+                                                <div class="bg-white p-3 rounded-xl shadow border border-slate-100 text-center">
+                                                    <i data-lucide="utensils" class="h-6 w-6 mx-auto text-pink-500 mb-2"></i>
+                                                    <div class="text-xs font-bold text-slate-700">Dispense <br>Food</div>
+                                                </div>
+                                                <div class="bg-white p-3 rounded-xl shadow border border-slate-100 text-center">
+                                                    <i data-lucide="droplet" class="h-6 w-6 mx-auto text-pink-500 mb-2"></i>
+                                                    <div class="text-xs font-bold text-slate-700">Dispense <br> Water</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                                                </div>
+                                            </div>
+                                        </section>
+                                        <!-- Slide 4 -->
+                                        <section class="min-w-full snap-center">
+                                            <div class="app-slide-glass p-6 md:p-12 h-full flex items-center">
+                                                <div class="lg:grid lg:grid-cols-2 gap-16 items-center w-full">
+                            <div>
+                                <h2 class="text-amber-400 font-semibold tracking-wide uppercase text-sm mb-2">The Control Center</h2>
+                                <h3 class="text-4xl font-bold mb-6">Designed for Protection</h3>
+                                <p class="text-slate-300 text-lg mb-8">
+                                    Always-on monitoring that safeguards what matters most. So your pet stays secure, wherever you are.
+                                </p>
+                                <div class="space-y-6">
+                                    <div class="flex">
+                                        <div class="flex-shrink-0">
+                                            <div class="flex items-center justify-center h-12 w-12 rounded-md bg-amber-400 text-white">
+                                                <i data-lucide="map-pin-house" class="h-6 w-6"></i>
+                                            </div>
+                                        </div>
+                                        <div class="ml-4">
+                                            <h4 class="text-lg font-medium">Geofencing</h4>
+                                            <p class="mt-2 text-slate-400">Set safe zones. If the collar breaches the zone, you'll be notified to take preventive action.</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex">
+                                        <div class="flex-shrink-0">
+                                            <div class="flex items-center justify-center h-12 w-12 rounded-md bg-amber-400 text-white">
+                                                <i data-lucide="lock" class="h-6 w-6"></i>
+                                            </div>
+                                        </div>
+                                        <div class="ml-4">
+                                            <h4 class="text-lg font-medium">Privacy First</h4>
+                                            <p class="mt-2 text-slate-400">Your data is handled with the same care as your pet. Secure, encrypted and always under your control.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-12 lg:mt-0 flex justify-center">
+                                <!-- Mobile App Mockup -->
+                                <div class="relative mx-auto border-gray-800 bg-gray-800 border-[14px] rounded-[2.5rem] h-[600px] w-[300px] shadow-2xl">
+                                    <div class="h-[32px] w-[3px] bg-gray-800 absolute -left-[17px] top-[72px] rounded-l-lg"></div>
+                                    <div class="h-[46px] w-[3px] bg-gray-800 absolute -left-[17px] top-[124px] rounded-l-lg"></div>
+                                    <div class="h-[46px] w-[3px] bg-gray-800 absolute -left-[17px] top-[178px] rounded-l-lg"></div>
+                                    <div class="h-[64px] w-[3px] bg-gray-800 absolute -right-[17px] top-[142px] rounded-r-lg"></div>
+                                    <div class="rounded-[2rem] overflow-hidden w-full h-full bg-slate-100 relative">
+                                        <!-- Screen Content -->
+                                        <div class="bg-amber-400 h-32 p-6 text-white rounded-b-3xl">
+                                            <div class="flex justify-between items-center mt-4">
+                                                <div>
+                                                    <div class="text-xs opacity-80">Good Morning,</div>
+                                                    <div class="font-bold text-xl">Buddy is Active</div>
+                                                </div>
+                                                <div class="h-10 w-10 bg-white/20 rounded-full flex items-center justify-center">
+                                                    <i data-lucide="menu" class="h-6 w-6"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="p-4 space-y-4 -mt-8">
+                                            <div class="bg-white p-4 rounded-xl shadow-lg flex items-center justify-between">
+                                                <div class="flex items-center space-x-3">
+                                                    <div class="bg-yellow-100 p-2 rounded-lg">
+                                                        <i data-lucide="heart-pulse" class="h-5 w-5 text-yellow-600"></i>
+                                                    </div>
+                                                    <div>
+                                                        <div class="text-xs text-gray-500">Heart Rate</div>
+                                                        <div class="font-bold text-slate-800">118 BPM</div>
+                                                    </div>
+                                                </div>
+                                                <div class="text-xs text-yellow-600 bg-yellow-50 px-2 py-1 rounded">Elevated</div>
+                                            </div>
+                                            <div class="p-0 rounded-xl shadow-lg overflow-hidden h-40 relative group">
+                                                    <img src="https://basemaps.cartocdn.com/rastertiles/voyager/15/9157/11920@2x.png" class="absolute inset-0 w-full h-full object-cover" alt="Map" />
+                                                    <div class="absolute inset-0 bg-white/10"></div>
+                                                    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
+                                                        <div class="bg-red-500 rounded-full p-1.5 shadow-lg">
+                                                            <svg class="h-4 w-4 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                                                        </div>
+                                                        <div class="bg-white rounded-full px-2 py-0.5 mt-1 shadow text-[7px] font-bold text-slate-700 flex items-center gap-1">
+                                                            <svg class="h-2.5 w-2.5 text-amber-500" viewBox="0 0 24 24" fill="currentColor" stroke="none"><circle cx="11" cy="4" r="2"/><circle cx="18" cy="8" r="2"/><circle cx="20" cy="16" r="2"/><path d="M9 10a5 5 0 0 1 5 5v3.5a3.5 3.5 0 0 1-6.84 1.045Q6.52 17.48 4.46 16.84A3.5 3.5 0 0 1 5.5 10Z"/></svg>
+                                                            Buddy
+                                                        </div>
+                                                    </div>
+                                                    <div class="absolute top-1.5 left-2 text-[8px] font-bold text-white" style="text-shadow: 0 1px 3px rgba(0,0,0,0.5);">Live Location</div>
+                                                    <div class="absolute top-1.5 right-2 flex items-center space-x-1">
+                                                        <div class="h-1.5 w-1.5 bg-green-500 rounded-full animate-pulse"></div>
+                                                        <span class="text-[8px] text-white" style="text-shadow: 0 1px 3px rgba(0,0,0,0.5);">GPS</span>
+                                                    </div>
+                                            </div>
+                                            <div class="grid grid-cols-2 gap-3">
+                                                <div class="bg-white p-3 rounded-xl shadow border border-slate-100 text-center">
+                                                    <i data-lucide="radar" class="h-6 w-6 mx-auto text-indigo-500 mb-2"></i>
+                                                    <div class="text-xs font-bold text-slate-700">Find Buddy</div>
+                                                </div>
+                                                <div class="bg-white p-3 rounded-xl shadow border border-slate-100 text-center">
+                                                    <i data-lucide="flashlight" class="h-6 w-6 mx-auto text-pink-500 mb-2"></i>
+                                                    <div class="text-xs font-bold text-slate-700">Flashlight</div>
+                                                </div>
+                                                <div class="bg-white p-3 rounded-xl shadow border border-slate-100 text-center">
+                                                    <i data-lucide="vibrate" class="h-6 w-6 mx-auto text-pink-500 mb-2"></i>
+                                                    <div class="text-xs font-bold text-slate-700">Vibrate</div>
+                                                </div>
+                                                <div class="bg-white p-3 rounded-xl shadow border border-slate-100 text-center">
+                                                    <i data-lucide="zap" class="h-6 w-6 mx-auto text-pink-500 mb-2"></i>
+                                                    <div class="text-xs font-bold text-slate-700">Zap</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                                                </div>
+                                            </div>
+                                        </section>
+        </div>
+        
+      </div>
+      <style>
+        .scrollbar-hide::-webkit-scrollbar { display: none; }
+        .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+        .app-pagination {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 2.5rem;
+        }
+        .app-dash {
+            width: 44px;
+            height: 8px;
+            border-radius: 8px;
+            background: #64748b;
+            opacity: 0.3;
+            border: none;
+            transition: background 0.3s, opacity 0.3s, box-shadow 0.3s;
+            box-shadow: 0 2px 8px 0 rgba(100,116,139,0.08);
+            outline: none;
+            cursor: pointer;
+        }
+        .app-dash.active {
+            background: linear-gradient(90deg, #fbbf24 60%, #fde68a 100%);
+            opacity: 1;
+            box-shadow: 0 4px 16px 0 rgba(251,191,36,0.18);
+        }
+        .app-slide-glass {
+            background: rgba(255,255,255,0.12);
+            box-shadow: 0 8px 32px 0 rgba(31,38,135,0.12);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-radius: 2.5rem;
+            border: 1.5px solid rgba(255,255,255,0.18);
+        }
+        @media (max-width: 1024px) {
+          .app-slide-glass { border-radius: 1.5rem; }
+        }
+      </style>
+      <div class="app-pagination">
+        <button class="app-dash active" aria-label="Go to slide 1"></button>
+        <button class="app-dash" aria-label="Go to slide 2"></button>
+        <button class="app-dash" aria-label="Go to slide 3"></button>
+        <button class="app-dash" aria-label="Go to slide 4"></button>
+      </div>
+      </style>
+    </section>
+
+    <!-- Rewards / Pledge Section -->
+    <!-- <section id="rewards" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-slate-900">Support the Project</h2>
+                <p class="mt-4 text-slate-600 max-w-2xl mx-auto">Choose a reward level to bring Furry Watch to life. All tiers include a 6-month free subscription to the premium app features.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+               
+                <div class="border border-slate-200 rounded-2xl p-6 hover:border-teal-500 hover:shadow-xl transition relative bg-white">
+                    <h3 class="text-lg font-bold text-slate-900">Essentials Pack</h3>
+                    <div class="mt-4 flex items-baseline text-slate-900">
+                        <span class="text-4xl font-extrabold tracking-tight">$149</span>
+                        <span class="ml-1 text-xl font-semibold text-slate-500 strike-through line-through">$249</span>
+                    </div>
+                    <p class="mt-4 text-slate-500 text-sm">Get the Guardian GPS Collar and 1 year of app subscription. Perfect for outdoor cats and dogs.</p>
+                    
+                    <ul class="mt-6 space-y-4">
+                        <li class="flex items-start">
+                            <i data-lucide="check" class="flex-shrink-0 h-5 w-5 text-teal-500"></i>
+                            <span class="ml-3 text-sm text-slate-600">Guardian GPS Collar</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="check" class="flex-shrink-0 h-5 w-5 text-teal-500"></i>
+                            <span class="ml-3 text-sm text-slate-600">1 Year App Access</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="check" class="flex-shrink-0 h-5 w-5 text-teal-500"></i>
+                            <span class="ml-3 text-sm text-slate-600">Beta Tester Community Access</span>
+                        </li>
+                    </ul>
+                    <div class="mt-8">
+                        <button class="w-full bg-slate-800 border border-transparent rounded-lg py-3 px-4 text-sm font-medium text-white hover:bg-slate-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500 transition">Select Reward</button>
+                        <p class="mt-2 text-xs text-center text-slate-400">Estimated Delivery: Dec 2025</p>
+                    </div>
+                </div>
+
+                
+                <div class="border-2 border-teal-500 rounded-2xl p-6 shadow-2xl relative bg-white transform md:-translate-y-4">
+                    <div class="absolute top-0 right-0 -mt-3 -mr-3 px-3 py-1 bg-teal-500 text-white text-xs font-bold uppercase tracking-wide rounded-full shadow-md">Most Popular</div>
+                    <h3 class="text-lg font-bold text-slate-900">Early Bird Ecosystem</h3>
+                    <div class="mt-4 flex items-baseline text-slate-900">
+                        <span class="text-5xl font-extrabold tracking-tight">$399</span>
+                        <span class="ml-1 text-xl font-semibold text-slate-500 line-through">$699</span>
+                    </div>
+                    <p class="mt-4 text-slate-500 text-sm">The complete package. Get the Camera, Collar, and Crate at our lowest price ever.</p>
+                    
+                    <ul class="mt-6 space-y-4">
+                        <li class="flex items-start">
+                            <i data-lucide="check" class="flex-shrink-0 h-5 w-5 text-teal-500"></i>
+                            <span class="ml-3 text-sm text-slate-600 font-semibold">Smart Sentinel Camera</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="check" class="flex-shrink-0 h-5 w-5 text-teal-500"></i>
+                            <span class="ml-3 text-sm text-slate-600 font-semibold">Guardian GPS Collar</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="check" class="flex-shrink-0 h-5 w-5 text-teal-500"></i>
+                            <span class="ml-3 text-sm text-slate-600 font-semibold">Sanctuary Smart Crate</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="check" class="flex-shrink-0 h-5 w-5 text-teal-500"></i>
+                            <span class="ml-3 text-sm text-slate-600">Lifetime Premium App Access</span>
+                        </li>
+                    </ul>
+                    <div class="mt-8">
+                        <button class="w-full bg-teal-600 border border-transparent rounded-lg py-4 px-4 text-base font-bold text-white hover:bg-teal-700 focus:outline-none transition shadow-lg shadow-teal-500/30">Pledge $399</button>
+                        <p class="mt-2 text-xs text-center text-slate-400">124 left of 500</p>
+                    </div>
+                </div>
+
+                
+                <div class="border border-slate-200 rounded-2xl p-6 hover:border-teal-500 hover:shadow-xl transition relative bg-white">
+                    <h3 class="text-lg font-bold text-slate-900">Double Trouble Pack</h3>
+                    <div class="mt-4 flex items-baseline text-slate-900">
+                        <span class="text-4xl font-extrabold tracking-tight">$699</span>
+                        <span class="ml-1 text-xl font-semibold text-slate-500 line-through">$1200</span>
+                    </div>
+                    <p class="mt-4 text-slate-500 text-sm">Have two pets? Get double the gear and manage them both in one app profile.</p>
+                    
+                    <ul class="mt-6 space-y-4">
+                        <li class="flex items-start">
+                            <i data-lucide="check" class="flex-shrink-0 h-5 w-5 text-teal-500"></i>
+                            <span class="ml-3 text-sm text-slate-600">2x All Hardware (Cam, Collar, Crate)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="check" class="flex-shrink-0 h-5 w-5 text-teal-500"></i>
+                            <span class="ml-3 text-sm text-slate-600">Custom Engraved Tags</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="check" class="flex-shrink-0 h-5 w-5 text-teal-500"></i>
+                            <span class="ml-3 text-sm text-slate-600">Developer API Access</span>
+                        </li>
+                    </ul>
+                    <div class="mt-8">
+                        <button class="w-full bg-slate-800 border border-transparent rounded-lg py-3 px-4 text-sm font-medium text-white hover:bg-slate-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500 transition">Select Reward</button>
+                        <p class="mt-2 text-xs text-center text-slate-400">Estimated Delivery: Jan 2026</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Meet the Founders Section -->
+    <section class="py-20 bg-white border-b border-slate-100">
+        <div class="max-w-3xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-slate-900 mb-6">Meet the Founders</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Founder 1 -->
+                <div class="bg-white rounded-3xl p-12 border border-slate-100 shadow-md hover:shadow-2xl transition duration-300 flex flex-col items-center text-center">
+                    <div class="h-36 w-36 bg-amber-50 rounded-full flex items-center justify-center mb-6 border-8 border-amber-100">
+                        <img src="Images/Siddhant.png" alt="Siddhant Dey" class="w-32 h-32 object-cover rounded-full" />
+                    </div>
+                    <div>
+                        <div class="text-2xl font-extrabold text-slate-900 mb-2">Siddhant Dey</div>
+                        <div class="text-sm text-amber-500 font-bold uppercase tracking-wider mb-3">Co-Founder</div>
+                        <div class="text-sm text-slate-500 leading-snug">10+ years of pet parent experience.<br>5+ years of Account management experience.</div>
+                    </div>
+                </div>
+                <!-- Founder 2 -->
+                <div class="bg-white rounded-3xl p-12 border border-slate-100 shadow-md hover:shadow-2xl transition duration-300 flex flex-col items-center text-center">
+                    <div class="h-36 w-36 bg-amber-50 rounded-full flex items-center justify-center mb-6 border-8 border-amber-100">
+                        <img src="Images/Ayush.jpg" alt="Ayush Bhatia" class="w-32 h-32 object-cover rounded-full" />
+                    </div>
+                    <div>
+                        <div class="text-2xl font-extrabold text-slate-900 mb-2">Ayush Bhatia</div>
+                        <div class="text-sm text-amber-500 font-bold uppercase tracking-wider mb-3">Co-Founder</div>
+                        <div class="text-sm text-slate-500 leading-snug">CS grad IIT<br>8+ years of experience developing highly secure scalable payments systems.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-12 mb-10 flex justify-center">
+                <p class="text-2xl md:text-2xl font-light text-slate-500 leading-normal max-w-2xl text-center">
+                    Our belief is simple: the bond between people and their pets deserves better visibility, better intelligence, and greater peace of mind. As pet parent, that belief is personal.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-20 bg-slate-50">
+        <div class="max-w-3xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-slate-900 mb-12">Frequently Asked Questions</h2>
+            
+            <div class="space-y-4">
+                 <details class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 group">
+                    <summary class="flex justify-between items-center cursor-pointer font-medium text-slate-900">
+                        How does the Aura app work?
+                        <span class="transition group-open:rotate-180">
+                            <i data-lucide="chevron-down" class="h-5 w-5 text-slate-500"></i>
+                        </span>
+                    </summary>
+                    <ul class="list-disc pl-6 space-y-2 mt-4 text-slate-600 text-m leading-relaxed">
+                        <li>The Aura app connects the <span class="font-semibold">Sentinel camera</span>, <span class="font-semibold">Guardian collar</span>, and <span class="font-semibold">Sanctuary crate</span> through a secure cloud network.</li>
+                        <li>Collects <span class="font-semibold">real-time health</span>, <span class="font-semibold">GPS</span>, and <span class="font-semibold">environmental data</span>, all visible and manageable through one unified mobile or web app.</li>
+                        <li>For urgent situations, the system supports <span class="font-semibold">emergency intervention</span> through the collar’s <span class="font-semibold">vibration or correction function</span>, giving owners an added layer of control when immediate attention is needed.</li>
+                    </ul>
+                </details>
+
+                <details class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 group">
+                    <summary class="flex justify-between items-center cursor-pointer font-medium text-slate-900">
+                        What’s the difference between this system and traditional pet trackers?
+                        <span class="transition group-open:rotate-180">
+                            <i data-lucide="chevron-down" class="h-5 w-5 text-slate-500"></i>
+                        </span>
+                    </summary>
+                    <ul class="list-disc pl-6 space-y-2 mt-4 text-slate-600 text-m leading-relaxed">
+                        <li>Unlike standalone GPS trackers or basic health devices, the Aura app is designed for both <span class="font-semibold">awareness</span> and <span class="font-semibold">action</span>.</li>
+                        <li>Combines health, GPS, behavior, and environmental monitoring into one connected system, enhanced by <span class="font-semibold">predictive AI</span> that identifies unusual patterns.</li>
+                        <li>Enables <span class="font-semibold">real-time response</span> through remote vibration and correction, allowing owners to intervene instantly rather than react after the fact.</li>
+                        <li>With a fully integrated smart crate, centralized app, and continuous monitoring, Aura moves beyond tracking into <span class="font-semibold">intelligent, responsive pet care</span>.</li>
+                    </ul>
+                </details>
+
+                <details class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 group">
+                    <summary class="flex justify-between items-center cursor-pointer font-medium text-slate-900">
+                        Is the system safe for pets?
+                        <span class="transition group-open:rotate-180">
+                            <i data-lucide="chevron-down" class="h-5 w-5 text-slate-500"></i>
+                        </span>
+                    </summary>
+                    <ul class="list-disc pl-6 space-y-2 mt-4 text-slate-600 text-m leading-relaxed">
+                        <li><span class="font-semibold">Safety</span> is built into the system from the ground up.</li>
+                        <li>All sensors are <span class="font-semibold">non-invasive</span>.</li>
+                        <li>The smart crate is designed with: fail-safe gate locking, rounded edges, smart ventilation, overheat protection, and reliable wireless communication.</li>
+                        <li>The system also includes <span class="font-semibold">backup power</span> and <span class="font-semibold">network redundancy</span> where applicable, so core functionality remains available even during interruptions.</li>
+                        <li>Our goal is to give owners confidence while keeping <span class="font-semibold">pet safety</span> at the center of every design choice.</li>
+                    </ul>
+                </details>
+
+                <details class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 group">
+                    <summary class="flex justify-between items-center cursor-pointer font-medium text-slate-900">
+                        What’s the range of the GPS?
+                        <span class="transition group-open:rotate-180">
+                            <i data-lucide="chevron-down" class="h-5 w-5 text-slate-500"></i>
+                        </span>
+                    </summary>
+                    <ul class="list-disc pl-6 space-y-2 mt-4 text-slate-600 text-m leading-relaxed">
+                        <li>No fixed range limit. As long as the collar has <span class="font-semibold">LTE connectivity</span>, you can track your pet’s location from <span class="font-semibold">anywhere in the world</span> through the app.</li>
+                    </ul>
+                </details>
+
+                <details class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 group">
+                    <summary class="flex justify-between items-center cursor-pointer font-medium text-slate-900">
+                        Is this system modular, and why is there a subscription?
+                        <span class="transition group-open:rotate-180">
+                            <i data-lucide="chevron-down" class="h-5 w-5 text-slate-500"></i>
+                        </span>
+                    </summary>
+                    <ul class="list-disc pl-6 space-y-2 mt-4 text-slate-600 text-m leading-relaxed">
+                        <li>The Aura app is <span class="font-semibold">modular</span>, so you can choose the devices and features that best fit your pet’s needs and your lifestyle. Whether you want just the <span class="font-semibold">collar</span>, the <span class="font-semibold">crate</span>, or the <span class="font-semibold">full connected setup</span>, the system is designed to adapt. The <span class="font-semibold">subscription</span> helps cover ongoing services such as <span class="font-semibold">LTE network access</span>, <span class="font-semibold">cloud connectivity.</li>
+                    </ul>
+                </details>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-300 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-4 gap-8">
+            <div class="col-span-1 md:col-span-2">
+                <div class="flex items-center space-x-2 mb-4">
+                    <span class="font-bold tracking-tighter uppercase" style="color: whitesmoke;">FURRYWATCH</span>
+                </div>
+                <p class="text-sm text-slate-400 max-w-xs">
+                    At Furrywatch we are redefining what it means to care for pets in a connected world.<br>
+                    Because ‘alone’ should never mean ‘unsafe.’
+                </p>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-4">Product</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#" class="hover:text-teal-400 transition">Features</a></li>
+                    <li><a href="#" class="hover:text-teal-400 transition">Tech Specs</a></li>
+                    <li><a href="#" class="hover:text-teal-400 transition">Subscription</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-4">Support</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#" class="hover:text-teal-400 transition">Help Center</a></li>
+                    <li><a href="#" class="hover:text-teal-400 transition">Contact Us</a></li>
+                    <li><a href="#" class="hover:text-teal-400 transition">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 mt-12 pt-8 border-t border-slate-800 text-center text-xs text-slate-500">
+            &copy; 2025 FurryWatch Inc. All rights reserved. Concept Design.
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Icons
+        lucide.createIcons();
+
+        // Simple smooth scroll (already native to HTML/CSS mostly, but ensuring button works)
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // App Showcase Pagination Dashes (dynamic, robust)
+        const appSlidesScroll = document.getElementById('app-slides-scroll');
+        const appSlides = appSlidesScroll ? Array.from(appSlidesScroll.children).filter(el => el.classList.contains('min-w-full')) : [];
+        const appDashes = document.querySelectorAll('.app-dash');
+        function updateActiveDash() {
+            if (!appSlidesScroll || appSlides.length === 0) return;
+            const slideWidth = appSlides[0].offsetWidth;
+            const scrollLeft = appSlidesScroll.scrollLeft;
+            // Find the closest slide
+            let idx = 0;
+            let minDist = Infinity;
+            appSlides.forEach((slide, i) => {
+                const dist = Math.abs(scrollLeft - i * slideWidth);
+                if (dist < minDist) {
+                    minDist = dist;
+                    idx = i;
+                }
+            });
+            appDashes.forEach((dash, i) => {
+                dash.classList.toggle('active', i === idx);
+            });
+        }
+        if (appSlidesScroll && appSlides.length && appDashes.length) {
+            appSlidesScroll.addEventListener('scroll', updateActiveDash);
+            appDashes.forEach((dash, i) => {
+                dash.addEventListener('click', () => {
+                    const slideWidth = appSlides[0].offsetWidth;
+                    appSlidesScroll.scrollTo({ left: i * slideWidth, behavior: 'smooth' });
+                });
+            });
+            // Initial state
+            updateActiveDash();
+        }
+    </script>
+</body>
+</html>
